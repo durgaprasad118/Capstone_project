@@ -1,0 +1,89 @@
+.user {
+    background-color: var(--blue-600);
+    display: flex;
+    gap: clamp(2rem,3vw,4rem);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.profile-image {
+    width: 30%;
+}
+
+.profile-image img {
+    height: 100%;
+   
+}
+
+.profile-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-text .headings {
+    line-height: 0.8rem;
+}
+
+
+.headings h3 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem,1vw,2rem);
+}
+
+.headings h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem,2vw,2.5rem)
+}
+
+.profile-text .categories {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; 
+    margin-top: 3rem;
+    max-height: 12vh;
+    overflow-y: scroll;
+}
+
+
+.categories::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+    background-color: var(--blue-300);
+    height: 10px;
+    border-radius: 10px;
+}
+
+.profile-text .categories div {
+    width: fit-content;
+    background-color: var(--blue-300);
+    padding: 0.5rem 1rem;
+    border-radius: 21px;
+}
+
+
+@media screen and (max-width: 550px) {
+    .user {
+        flex-wrap: wrap;
+    }
+    .profile-text {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .user {
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px ) {
+    .user {
+        height: 60%;
+    }
+}
